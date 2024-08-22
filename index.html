@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<header class="header__navbar">
+    <label for="menu-toggle">
+        <div class="header__burger-menu">
+            <div class="header__navbar-menu container">
+                <div class="header__bottom-menu">
+                    <div class="header__logo">
+                        <a href="index.html" class="header__logo-link">
+                            <img class="header__logo-image" src="img/header/logo-image.svg" alt="Logo image" />
+                        </a>
+                    </div>
+                    <div class="header__bottom-items">
+                        <input class="checkbox" id="menu-toggle" type="checkbox">
+                        <span class="menu"> <span class="hamburger"></span> </span>
+                        <ul class="header__menu-items menu-list">
+                            <li class="menu-list__item">
+                                <a href="index.html#about-us" class="menu__element-link">About Us</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a href="index.html#categories" class="menu__element-link">Categories</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a href="index.html#shop" class="menu__element-link">Shop</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a href="index.html#testimonials" class="menu__element-link">Testimonials</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a data-goto=".block__footer" href="index.html#footer"
+                                    class="menu__element-link">Contact us</a>
+                            </li>
+                            <!-- </ul> -->
+                            <!-- </div> -->
+                            <div class="header__top-menu">
+                                <div class="header__top-title top">
+                                    <p class="header__title-text title__text-top">20% OFF ON ORGANIC SOAPS | FREE
+                                        SHIPPING OVER $40
+                                    </p>
+                                </div>
+                                <div class="header__top-title bottom">
+                                    <a class="header__title-link title__link-top" href="#shop">
+                                        <p class="header__title-text">TRY OUR AROMATIC SOAPS</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="social-list__item-container">
+                                <!-- <ul class="header__social social-list"> -->
+                                <li class="social-list__item">
+                                    <a class="header-social__link" href="https://www.facebook.com/" alt="Facebook logo">
+                                        <svg width="30"
+                                            class="si66b21c4f81520484c2393cdc26d527e9f6db4a3ab4622ccbee7f74e91722948689935 svgIcon_1J7"
+                                            viewBox="0 0 32 32">
+                                            <path class="logo_2gS"
+                                                d="M13.6383 25H16.9133V16.0044H19.3702L19.8561 13.1936H16.9133V11.1568C16.9133 10.5002 17.3379 9.8108 17.9447 9.8108H19.6171V7H17.5674V7.0126C14.3604 7.129 13.7014 8.9864 13.6443 10.9374H13.6383V13.1936H12V16.0044H13.6383V25Z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a class="header-social__link" href="https://www.instagram.com/">
+                                        <svg width="30"
+                                            class="si66b21c4f81520484c2393cdc26d527e9f6db4a3ab4622ccbee7f74e91722948689935 svgIcon_1J7"
+                                            viewBox="0 0 32 32">
+                                            <g>
+                                                <path class="logo_2gS"
+                                                    d="M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z">
+                                                </path>
+                                                <path class="insta-mask-logo-hover_19f"
+                                                    style="fill:url(#si66b21c4f81520484c2393cdc26d527e9f6db4a3ab4622ccbee7f74e91722948689935instagramhover)"
+                                                    d="M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a class="header-social__link" href="https://www.youtube.com/">
+                                        <svg width="30"
+                                            class="si66b21c4f81520484c2393cdc26d527e9f6db4a3ab4622ccbee7f74e91722948689935 svgIcon_1J7"
+                                            viewBox="0 0 32 32">
+                                            <path class="logo_2gS"
+                                                d="M24.8319297,11.4874563 C24.6803369,10.1603684 24.3639692,9.77357894 24.1398754,9.59352174 C23.7839619,9.31343284 23.1380446,9.21340113 22.2746246,9.15338207 C20.8905163,9.06001905 18.537532,9 16,9 C13.455877,9 11.1094837,9.05335028 9.72537529,9.15338207 C8.86195533,9.21340113 8.21603808,9.31343284 7.8601245,9.59352174 C7.63603076,9.77357894 7.32625412,10.1603684 7.1680703,11.4874563 C6.94397657,13.4013973 6.94397657,17.7627818 7.1680703,19.6767227 C7.32625412,21.0038107 7.63603076,21.3906002 7.8601245,21.5706573 C8.21603808,21.8507463 8.86195533,21.950778 9.72537529,22.0107971 C11.1094837,22.1041601 13.455877,22.164179 16,22.164179 C18.544123,22.164179 20.8905163,22.1041601 22.2746246,22.0107971 C23.1380446,21.950778 23.7839619,21.8507463 24.1398754,21.5706573 C24.3639692,21.3972689 24.6737458,21.0038107 24.8319297,19.6767227 C25.0560234,17.7627818 25.0560234,13.4013973 24.8319297,11.4874563 Z M13.8249725,18.4429978 L13.8249725,12.7145125 L19.2559502,15.5754208 L13.8249725,18.4429978 Z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </label>
+</header>
+
+<body>
+
+
+
+
+    <main>
+
+        <!--           CAROUSEL.          -->
+        <section class="products">
+            <div class="products-container">
+                <div class="product-general-container">
+                    <div class="products-container__top">
+                        <div class="products__top-title">
+                            <a class="products-top__title-link" href="shop.html">
+                                <h2 class="products-top__title-text">Store homepage</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div id="myCarousel" class="carousel slide" data-interval="false">
+
+                            <div class="carousel-inner products-container__contents" role="listbox">
+                                <div class="item active">
+                                    <div class="products-contents__carousel">
+                                        <div class="products-contents__carousel-image">
+                                            <img class="products-carousel__image"
+                                                src="img/carousel-product/caramel-dream.png" alt="${product.altText}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="products-contents__carousel">
+                                        <div class="products-contents__carousel-image">
+                                            <img class="products-carousel__image"
+                                                src="img/carousel-product/caramel-dream2.png" alt="${product.altText}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="products-contents__carousel">
+                                        <div class="products-contents__carousel-image">
+                                            <img class="products-carousel__image"
+                                                src="img/carousel-product/caramel-dream3.png" alt="${product.altText}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="products-contents__carousel">
+                                        <div class="products-contents__carousel-image">
+                                            <img class="products-carousel__image"
+                                                src="img/carousel-product/caramel-dream4.png" alt="${product.altText}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+                            <div id="thumbCarousel" class="products-contents__bottom-image">
+                                <div data-target="#myCarousel" data-slide-to="0"
+                                    class="thumb active products-bottom__image">
+                                    <img class="products-additionally__image"
+                                        src="img/carousel-product/caramel-dream.png" alt="${product.altText}">
+                                </div>
+                                <div data-target="#myCarousel" data-slide-to="1" class="thumb products-bottom__image">
+                                    <img class="products-additionally__image"
+                                        src="img/carousel-product/caramel-dream2.png" alt="${product.altText}">
+                                </div>
+                                <div data-target="#myCarousel" data-slide-to="2" class="thumb products-bottom__image">
+                                    <img class="products-additionally__image"
+                                        src="img/carousel-product/caramel-dream3.png" alt="${product.altText}">
+                                </div>
+                                <div data-target="#myCarousel" data-slide-to="3" class="thumb products-bottom__image">
+                                    <img class="products-additionally__image"
+                                        src="img/carousel-product/caramel-dream4.png" alt="${product.altText}">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="products-description">
+                    <div class="products-description__top">
+                        <div class="products-description__stock">
+                            <p class="products-description__stock-text">${product.stock}</p>
+                        </div>
+                        <div class="products-description__title">
+                            <h1 class="products-description__title-text">${product.title}</h1>
+                        </div>
+                        <div class="products-description__content">
+                            <p class="products-description__text-italic">${product.number}</p>
+                        </div>
+                        <div class="products-description__price">
+                            <p class="products-description__price-text">${product.price}</p>
+                        </div>
+                        <hr class="products-description__line-title">
+                        <div class="products-description__quantity-button">
+                            <div class="products-description__quantity">
+                                <form action="/add-to-cart" method="post">
+                                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                                </form>
+                            </div>
+                            <div class="products-description__button-cart">
+                                <button class="products-description__cart" onclick="addToCart('${product.id}')">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-description__tab-container">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                checked>
+                            <label class="btn btn-outline-primary" for="btnradio1">DESCRIPTION</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio2">USAGE</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio3">INGREDIENTS</label>
+                        </div>
+
+                        <div id="products-description__description"
+                            class="products-description__tab products-description__tab-active">
+                            <div class="products-description__composition">
+                                <p class="products-description__composition-text">This cinnamon soap bar contains rich
+                                    shea butter and organic coconut milk that moistures and cares about your skin. We
+                                    also add a bit of honey that helps soothe and retain moisture to the skin. Cinnamon
+                                    leaves give this soap a warm, toasty, and autumn scent.</p>
+                            </div>
+                        </div>
+                        <div id="products-description__usage" class="products-description__tab-1">
+                            <div class="products-description__composition">
+                                <p class="products-description__composition-text">${product.usage}</p>
+                            </div>
+                        </div>
+                        <div id="products-description__ingredients" class="products-description__tab-1">
+                            <div class="products-description__composition">
+                                <p class="products-description__composition-text">${product.ingredients}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>
