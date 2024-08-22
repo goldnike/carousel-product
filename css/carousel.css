@@ -276,13 +276,6 @@
 		}
 
 		.products-description__tab-container {
-
-			/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-			.products-description__tab-1 {
-				display: none;
-			}
-
-			/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 			.btn-group {
 				display: flex;
 				margin-top: 20px;

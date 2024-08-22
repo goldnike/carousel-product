@@ -1,5 +1,6 @@
 function init() {
     import("./carousel.js");
+    import("./radio.js");
   }  
 
 
@@ -47,3 +48,37 @@ $(document).ready(function(){
        //console.log($(thumbnailActive).siblings()); 
     });
  });
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.btn-check');
+    const tabContents = document.querySelectorAll('.products-description__tab');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('change', () => {
+            tabContents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            const targetContent = document.querySelector(`#products-description__${tab.id.replace('btnradio', '')}`);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+            }
+        });
+    });
+
+    // Activate the first tab by default
+    const firstTab = tabs[0];
+    if (firstTab) {
+        firstTab.checked = true;
+        const firstContent = document.querySelector(`#products-description__${firstTab.id.replace('btnradio', '')}`);
+        if (firstContent) {
+            firstContent.style.display = 'block';
+        }
+    }
+});

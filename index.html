@@ -222,38 +222,70 @@
                         </div>
                     </div>
                     <div class="products-description__tab-container">
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
-                                checked>
-                            <label class="btn btn-outline-primary" for="btnradio1">DESCRIPTION</label>
 
+<!-- 
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="btnradio1">DESCRIPTION</label>
+                    
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btnradio2">USAGE</label>
-
+                    
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio3">INGREDIENTS</label>
+                        </div> -->
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="btnradio1">DESCRIPTION</label>
+                        
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio2">USAGE</label>
+                        
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btnradio3">INGREDIENTS</label>
                         </div>
+                        
+                        <div id="description" class="description">
+                            <!-- Descriptions will be displayed here -->
+                        </div>
+                        
 
-                        <div id="products-description__description"
-                            class="products-description__tab products-description__tab-active">
+
+                        <!-- <div id="products-description__description" class="products-description__tab">
                             <div class="products-description__composition">
-                                <p class="products-description__composition-text">This cinnamon soap bar contains rich
-                                    shea butter and organic coconut milk that moistures and cares about your skin. We
-                                    also add a bit of honey that helps soothe and retain moisture to the skin. Cinnamon
-                                    leaves give this soap a warm, toasty, and autumn scent.</p>
+                                <p>This cinnamon soap bar contains rich shea butter and organic coconut milk...</p>
                             </div>
                         </div>
-                        <div id="products-description__usage" class="products-description__tab-1">
+                        <div id="products-description__usage" class="products-description__tab">
                             <div class="products-description__composition">
-                                <p class="products-description__composition-text">${product.usage}</p>
+                                <p>Wet your skin, lather the lemon start soap, and massage gently...</p>
                             </div>
                         </div>
-                        <div id="products-description__ingredients" class="products-description__tab-1">
+                        <div id="products-description__ingredients" class="products-description__tab">
                             <div class="products-description__composition">
-                                <p class="products-description__composition-text">${product.ingredients}</p>
+                                <p>Yalang-Ylang Essential Oil, Rose Geranium Essential Oil, Lemongrass Essential Oil...</p>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="btn-group d-flex justify-content-between m-4">
+                        <input id="a" type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="a">Option A</label>
+                      
+                        <input id="b" type="radio" class="btn-check" name="btnradio" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="b">Option B</label>
+                      
+                        <input id="c" type="radio" class="btn-check" name="btnradio" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="c">Option C</label>
+                      </div>
+                      
+                      <div id="description" class="description">
+                      </div> -->
+                      
+                      
+                    
+
                 </div>
             </div>
         </section>
@@ -264,6 +296,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/radio.js"></script>
 </body>
 
 </html>
