@@ -12,7 +12,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css" />
+
 </head>
+
 <header class="header__navbar">
     <label for="menu-toggle">
         <div class="header__burger-menu">
@@ -43,8 +45,6 @@
                                 <a data-goto=".block__footer" href="index.html#footer"
                                     class="menu__element-link">Contact us</a>
                             </li>
-                            <!-- </ul> -->
-                            <!-- </div> -->
                             <div class="header__top-menu">
                                 <div class="header__top-title top">
                                     <p class="header__title-text title__text-top">20% OFF ON ORGANIC SOAPS | FREE
@@ -58,7 +58,6 @@
                                 </div>
                             </div>
                             <div class="social-list__item-container">
-                                <!-- <ul class="header__social social-list"> -->
                                 <li class="social-list__item">
                                     <a class="header-social__link" href="https://www.facebook.com/" alt="Facebook logo">
                                         <svg width="30"
@@ -108,12 +107,7 @@
 </header>
 
 <body>
-
-
-
-
     <main>
-
         <!--           CAROUSEL.          -->
         <section class="products">
             <div class="products-container">
@@ -222,73 +216,68 @@
                         </div>
                     </div>
                     <div class="products-description__tab-container">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                checked>
+                            <label class="btn btn-outline-primary" for="btnradio1">DESCRIPTION</label>
 
-<!-- 
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary" for="btnradio1">DESCRIPTION</label>
-                    
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btnradio2">USAGE</label>
-                    
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btnradio3">INGREDIENTS</label>
-                        </div> -->
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary" for="btnradio1">DESCRIPTION</label>
-                        
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btnradio2">USAGE</label>
-                        
+
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btnradio3">INGREDIENTS</label>
                         </div>
-                        
+
                         <div id="description" class="description">
-                            <!-- Descriptions will be displayed here -->
-                        </div>
-                        
-
-
-                        <!-- <div id="products-description__description" class="products-description__tab">
-                            <div class="products-description__composition">
-                                <p>This cinnamon soap bar contains rich shea butter and organic coconut milk...</p>
-                            </div>
-                        </div>
-                        <div id="products-description__usage" class="products-description__tab">
-                            <div class="products-description__composition">
-                                <p>Wet your skin, lather the lemon start soap, and massage gently...</p>
-                            </div>
-                        </div>
-                        <div id="products-description__ingredients" class="products-description__tab">
-                            <div class="products-description__composition">
-                                <p>Yalang-Ylang Essential Oil, Rose Geranium Essential Oil, Lemongrass Essential Oil...</p>
-                            </div>
                         </div>
                     </div>
-
-
-                    <div class="btn-group d-flex justify-content-between m-4">
-                        <input id="a" type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
-                        <label class="btn btn-outline-primary" for="a">Option A</label>
-                      
-                        <input id="b" type="radio" class="btn-check" name="btnradio" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="b">Option B</label>
-                      
-                        <input id="c" type="radio" class="btn-check" name="btnradio" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="c">Option C</label>
-                      </div>
-                      
-                      <div id="description" class="description">
-                      </div> -->
-                      
-                      
-                    
-
                 </div>
             </div>
         </section>
+
+
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Show a second modal and hide this one with the button below.
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                            data-bs-toggle="modal">Open second modal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Hide this modal and show the first with the button below.
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back
+                            to first</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first
+            modal</button>
+
+
+
+
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
