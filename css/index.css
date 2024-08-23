@@ -94,214 +94,91 @@ img {
 }
 
 
-
-/* Стилі для початкового приховування меню */
-.header__menu-container {
-    display: none; /* Початкове приховування меню */
-    position: absolute; /* Переконайтесь, що позиція меню вірна */
-    top: 100%; /* Або інше положення, яке відповідає вашим потребам */
-    left: 0;
-    right: 0;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header-burger-container {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    width: 40px; /* Розмір кнопки */
-    height: 40px; /* Розмір кнопки */
+:root {
+    --light-color: #fff;
+    --text-dark: #27292b;
+    --text-warm-light: #fff5eb;
+    --text-cold-light: #626060;
+    --text-menu-light: #b9aea7;
+    --dark-text-accent: #706e6e;
+    --light-text-accent: #ffffffdb;
+    --text-description-accent: #684f40;
+    --text-address-light: #706e6e;
+    --subtitle-menu-light: #fff5eb;
+    --subtitle-font-size: 20px;
+    --text-variant-grey: #595959;
+    --input-text: #7e7f81;
+    --btn-primary: #e1a455;
+    --btn-outline-dark: #684f40;
+    --btn-outline-light: #fff;
+    --btn-primary-hover: #ff8542;
+    --btn-outline-hover: #e1a455;
+    --light-link-header: #ffffffd4;
+    --light-link-hover: #684f40;
+    --input-background: #e5e5e5;
+    --background-dark: #27292b;
+    --about-us-header-text: #27292b;
+    --about-us-header-paragraph: #626060;
+    --about-us-link-border: #684f40;
+    --about-us-link-text: #684f40;
+    --border-contact-form-light: #83b3db;
+    --border-contact-form-dark: #84ADCB;
+    --our-bread-text-description: rgb(112,110,110);
+    --background-contact-form: rgba(0, 0, 0, 0.6);
+    --menu-btn-icon-light-hover: #ffffff1c;
+    --menu-btn-icon-dark-hover: #ffca843d;
+    --menu-svg-fill-hover: #ffac4040;
+    --error-color: red;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
 }
 
-.burger-btn {
-    width: 25px;
-    height: 2px;
-    background-color: #000;
+img {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease-in-out;
-}
-
-.burger-btn::before,
-.burger-btn::after {
-    content: '';
-    position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
 }
 
-.burger-btn::before {
-    top: -8px;
+.container {
+    max-width: 1200px;
+    padding: 0 24px;
+    margin: auto;
 }
 
-.burger-btn::after {
-    bottom: -8px;
+li {
+    list-style: none;
 }
 
-.header-burger-open .burger-btn {
-    background-color: transparent;
+a {
+    text-decoration: none;
 }
 
-.header-burger-open .burger-btn::before {
-    transform: translateY(8px) rotate(45deg);
+.overflow-hidden {
+    overflow: hidden;
 }
 
-.header-burger-open .burger-btn::after {
-    transform: translateY(-8px) rotate(-45deg);
+@media (min-width: 768px) {
+    .container {
+        padding: 0 32px;
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 991px) {
-    .header__navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
+@media (min-width: 992px) {
+    .container {
+        padding: 0 40px;
     }
+}
 
-    .header__logo {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        padding: 30px 15px;
-    }
-
-    .header__logo-link {
-        display: block;
-        text-align: center;
-        width: 1200px;
-        text-decoration: none;
-    }
-
-    .header__logo-text {
-        font-family: var(--title-font-family);
-        font-size: 34px;
-        color: var(--header-nav-text-logo);
-        margin: 0 auto;
-    }
-
-    .header__navbar-menu {
-        width: 100%;
-        color: var(--header-nav-text-menu);
-        padding: 10px 15px 50px;
-    }
-
-    .header__menu-lists {
-        list-style: none;
-        margin: 0 auto;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .header__menu-item {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        padding: 123.5px 7px 0 15px;
-        margin-bottom: 50px;
-    }
-
-    .header__menu-link {
-        text-decoration: none;
-        color: var(--header-nav-text-menu);
-        font-family: var(--text-font-family);
-        font-size: 15px;
-        position: relative;
-    }
-
-    .header__menu-link:hover {
-        color: var(--header-nav-link-hover);
-        text-decoration: none;
-    }
-
-    .header__menu-link:hover::after {
-        content: '';
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        background-color: var(--header-nav-link-hover);
-        border-radius: 50%;
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .dropdown-menu {
-        text-decoration: none;
-        color: var(--header-nav-text-menu);
-        font-family: var(--text-font-family);
-        font-size: inherit;
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        box-shadow: 0 4px 8px var(--header-nav-box-shadow);
-        list-style: none;
-        padding: 10px 0;
-        margin: 0;
-        z-index: 10;
-        min-width: 150px;
-        text-align: center;
-    }
-
-    .header__menu-item:hover .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-item {
-        text-decoration: none;
-        color: var(--header-nav-text-menu);
-        padding: 10px 15px;
-        display: block;
-        transition: background-color 0.3s;
-        text-align: center;
-    }
-
-    .dropdown-item:hover {
-        color: var(--header-nav-link-hover);
-        text-decoration: none;
-
-    }
-
-    .header__menu-link:hover::after,
-    .header__menu-item:hover .header__menu-link::after {
-        content: '';
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        background-color: var(--header-nav-link-hover);
-        border-radius: 50%;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .header__menu-item:hover .dropdown-menu {
-        display: block;
-        background-color: var(--header-nav-background-color);
+@media (min-width: 1400px) {
+    .container {
+        padding: 0 15px;
     }
 }
