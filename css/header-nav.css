@@ -8,14 +8,16 @@
     position: relative;
     z-index: 1;
 }
+
 .header-menu__top-desktop {
     display: none;
 }
+
 .header__background {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50.7% 0%;
-    background-color: #fef1e4;
+    background: linear-gradient(to right, #fef1e5, #ffefe4, #feece1, #fdeadd, #f6e2d7);
 }
 
 .header__nav {
@@ -38,7 +40,7 @@
 }
 
 .header__nav-list {
-    margin: 0 24px 0 24px;
+    margin: 0 24px;
 }
 
 .nav-list {
@@ -248,11 +250,79 @@
 
 @media (min-width: 992px) {
     .container {
-        padding: 0 40px;
+        padding: 0 32px;
     }
+
     .header-menu__top-desktop {
         display: block;
     }
+
+    .header__background {
+        background: linear-gradient(to right, #fef1e5, #ffefe4, #feece1, #fdeadd, #f6e2d7);
+    }
+
+    .header__nav-list {
+        margin: 5px 0 0 0;
+    }
+
+    .header__nav {
+        padding: 0 0 20px 20px;
+    }
+
+    .header-menu__top-title {
+        padding: 15px;
+        margin: 0;
+        background-color: #a18b83;
+
+    }
+
+    .header__text-desktop,
+    .header__title-desktop {
+        margin: 0;
+    }
+
+    .header__nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-template-areas:
+            "top-left top-center top-right"
+            "logo menu social";
+    }
+
+    .header-menu__top-desktop {
+        grid-column: 1 / -1;
+        background-color: #fef1e4;
+        text-align: center;
+    }
+
+    .header-menu__top-title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .header__logo {
+        grid-area: logo;
+    }
+
+    .header__nav-menu {
+        grid-area: menu;
+        display: flex;
+        justify-content: center;
+        flex: 2;
+    }
+
+    .header__social-links {
+        grid-area: social;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+
     .header__nav {
         width: 100%;
     }
@@ -294,46 +364,6 @@
 
     .header__nav-btn {
         margin-left: 20px;
-    }
-
-    .header__nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        padding: 10px;
-        grid-template-areas: 
-            "top-left top-center top-right"
-            "logo menu social";
-    }
-    
-    .header-menu__top-desktop {
-        grid-column: 1 / -1;
-        background-color: #fef1e4;
-        padding: 10px 0;
-        text-align: center;
-    }
-    
-    .header-menu__top-title {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    
-    .header__logo {
-        grid-area: logo;
-    }
-    
-    .header__nav-menu {
-        grid-area: menu;
-        display: flex;
-        justify-content: center;
-        flex: 2;
-    }
-    
-    .header__social-links {
-        grid-area: social;
-        display: flex;
-        justify-content: flex-end;
     }
 }
 
